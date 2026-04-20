@@ -1,0 +1,9 @@
+{
+  "name": "花蕾 Hualei",
+  "short_name": "花蕾",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#09111e",
+  "theme_color": "#09111e",
+  "description": "花蕾是一款面向 LOF 投资者的静态产品宣传站。"
+}
