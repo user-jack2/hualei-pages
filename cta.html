@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>花蕾 | CTA 策略研究</title>
+  <meta name="description" content="花蕾 CTA 策略研究页，展示国内期货主力连续合约趋势策略、参数扫描、单品种表现和组合净值曲线。" />
+  <meta name="theme-color" content="#070915" />
+  <link rel="stylesheet" href="./cta.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-lockup" href="./index.html" aria-label="Hualei home">
+      <span class="brand-mark"></span>
+      <span>花蕾 Hualei</span>
+    </a>
+    <nav class="site-nav">
+      <a href="./index.html">LOF 数据</a>
+      <a href="./cta.html" class="active">CTA 策略</a>
+      <a href="#results">结果</a>
+      <a href="#varieties">品种</a>
+      <a href="#method">方法</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-chart" src="cta-assets/cta_portfolio_nav.svg" alt="CTA portfolio NAV" />
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Hualei Strategy Surface</p>
+        <h1>花蕾 CTA：主力连续合约趋势策略。</h1>
+        <p class="hero-text">
+          花蕾的第二条业务线面向主力连续合约趋势策略：
+          用价格结构、成交量确认、保证金约束和单品种参数扫描，
+          把每个品种的趋势特征拆开评估，并以可视化页面对外展示。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#results">查看 V5 结果</a>
+          <a class="secondary-link" href="./index.html">返回 LOF 业务</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="metric-band">
+      <div class="metric">
+        <span>V5 组合参考 NAV</span>
+        <strong>6.389</strong>
+      </div>
+      <div class="metric">
+        <span>最大回撤</span>
+        <strong>-56.9%</strong>
+      </div>
+      <div class="metric">
+        <span>夏普比率</span>
+        <strong>0.420</strong>
+      </div>
+      <div class="metric">
+        <span>覆盖品种</span>
+        <strong>72</strong>
+      </div>
+    </section>
+
+    <section class="business-switch">
+      <div>
+        <p class="eyebrow">Two Businesses</p>
+        <h2>同一套金融工程能力，拆成两种产品形态。</h2>
+      </div>
+      <div class="switch-grid">
+        <a class="switch-card" href="./index.html">
+          <span>01</span>
+          <h3>LOF 数据产品</h3>
+          <p>实时溢价、估值来源、自选提醒和移动端体验。</p>
+        </a>
+        <a class="switch-card active" href="./cta.html">
+          <span>02</span>
+          <h3>CTA 策略引擎</h3>
+          <p>主力连续合约、趋势信号、品种参数和净值展示。</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-grid">
+      <div class="section-copy">
+        <p class="eyebrow">Signal Stack</p>
+        <h2>V5 策略逻辑</h2>
+        <p>空仓时先看两日高低点同向突破，再用成交量放量确认；持仓后不重复开仓，只在止损或方向结束时处理仓位。</p>
+      </div>
+      <div class="logic-lanes">
+        <div><span>01</span><strong>价格结构</strong><p>连续两天最高价和最低价同时上移开多，同时下移开空。</p></div>
+        <div><span>02</span><strong>成交量确认</strong><p>当天或前一天成交量超过近 5 日均量阈值，阈值按品种扫描。</p></div>
+        <div><span>03</span><strong>反手机制</strong><p>每日重新判断高低价斜率，方向结束后按收盘价反手。</p></div>
+        <div><span>04</span><strong>风险约束</strong><p>单品种每次使用 50% 权益作为保证金，日内高低价触发 5% 保证金止损。</p></div>
+      </div>
+    </section>
+
+    <section class="result-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Top Varieties</p>
+          <h2>样本内 V5 表现排名</h2>
+        </div>
+        <a href="cta-assets/cta_portfolio_nav.svg">组合净值 SVG</a>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>品种</th>
+              <th>NAV</th>
+              <th>最大回撤</th>
+              <th>夏普</th>
+              <th>交易次数</th>
+              <th>价格阈值</th>
+              <th>放量阈值</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CF</td><td>118.5</td><td>-73.9%</td><td>0.831</td><td>268</td><td>5.0%</td><td>100.0%</td></tr>
+            <tr><td>CU</td><td>87.94</td><td>-57.3%</td><td>0.694</td><td>461</td><td>5.0%</td><td>100.0%</td></tr>
+            <tr><td>FU</td><td>49.38</td><td>-52.5%</td><td>0.727</td><td>489</td><td>2.0%</td><td>100.0%</td></tr>
+            <tr><td>IC</td><td>23.67</td><td>-47.7%</td><td>0.981</td><td>264</td><td>2.0%</td><td>100.0%</td></tr>
+            <tr><td>P</td><td>22.62</td><td>-45.8%</td><td>0.682</td><td>316</td><td>2.0%</td><td>120.0%</td></tr>
+            <tr><td>SC</td><td>18.44</td><td>-50.0%</td><td>1.054</td><td>149</td><td>5.0%</td><td>120.0%</td></tr>
+            <tr><td>IF</td><td>15.65</td><td>-37.9%</td><td>0.758</td><td>195</td><td>2.0%</td><td>120.0%</td></tr>
+            <tr><td>AU</td><td>12.69</td><td>-63.2%</td><td>0.611</td><td>255</td><td>2.0%</td><td>120.0%</td></tr>
+            <tr><td>AG</td><td>8.270</td><td>-56.9%</td><td>0.613</td><td>175</td><td>3.0%</td><td>120.0%</td></tr>
+            <tr><td>JM</td><td>4.878</td><td>-58.2%</td><td>0.564</td><td>106</td><td>5.0%</td><td>150.0%</td></tr>
+            <tr><td>M</td><td>4.632</td><td>-80.3%</td><td>0.350</td><td>809</td><td>1.0%</td><td>100.0%</td></tr>
+            <tr><td>IM</td><td>4.583</td><td>-34.9%</td><td>1.322</td><td>79</td><td>2.0%</td><td>100.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="varieties" class="charts-section">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Curves</p>
+          <h2>核心品种净值曲线</h2>
+        </div>
+        <p>2000-07-17 至 2026-04-30</p>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-tile"><div class="tile-head"><span>CF</span><a href="cta-assets/CF_nav.svg">SVG</a></div><img src="cta-assets/CF_nav.svg" alt="CF CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>CU</span><a href="cta-assets/CU_nav.svg">SVG</a></div><img src="cta-assets/CU_nav.svg" alt="CU CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>FU</span><a href="cta-assets/FU_nav.svg">SVG</a></div><img src="cta-assets/FU_nav.svg" alt="FU CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>IC</span><a href="cta-assets/IC_nav.svg">SVG</a></div><img src="cta-assets/IC_nav.svg" alt="IC CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>P</span><a href="cta-assets/P_nav.svg">SVG</a></div><img src="cta-assets/P_nav.svg" alt="P CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>SC</span><a href="cta-assets/SC_nav.svg">SVG</a></div><img src="cta-assets/SC_nav.svg" alt="SC CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>IF</span><a href="cta-assets/IF_nav.svg">SVG</a></div><img src="cta-assets/IF_nav.svg" alt="IF CTA NAV" /></article>
+        <article class="chart-tile"><div class="tile-head"><span>AU</span><a href="cta-assets/AU_nav.svg">SVG</a></div><img src="cta-assets/AU_nav.svg" alt="AU CTA NAV" /></article>
+      </div>
+    </section>
+
+    <section id="method" class="method-grid">
+      <div class="method-card">
+        <p class="eyebrow">Volume Threshold</p>
+        <h2>成交量阈值不是一刀切。</h2>
+        <div class="volume-bars">
+          <div><span>100.0%</span><strong>22</strong></div>
+          <div><span>120.0%</span><strong>12</strong></div>
+          <div><span>150.0%</span><strong>14</strong></div>
+          <div><span>180.0%</span><strong>24</strong></div>
+        </div>
+      </div>
+      <div class="method-card">
+        <p class="eyebrow">Robust Candidates</p>
+        <h2>更值得继续样本外检验的品种</h2>
+        <div class="table-wrap compact">
+          <table>
+            <thead>
+              <tr><th>品种</th><th>NAV</th><th>回撤</th><th>夏普</th><th>交易</th><th>价阈</th><th>量阈</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>LH</td><td>1.692</td><td>-12.4%</td><td>2.193</td><td>17</td><td>1.0%</td><td>150.0%</td></tr>
+              <tr><td>PP</td><td>1.547</td><td>-8.1%</td><td>2.056</td><td>62</td><td>0.0%</td><td>150.0%</td></tr>
+              <tr><td>L</td><td>1.466</td><td>-7.2%</td><td>1.987</td><td>51</td><td>0.0%</td><td>150.0%</td></tr>
+              <tr><td>BR</td><td>1.976</td><td>-18.4%</td><td>1.925</td><td>22</td><td>2.0%</td><td>120.0%</td></tr>
+              <tr><td>EB</td><td>1.874</td><td>-16.9%</td><td>1.886</td><td>20</td><td>1.0%</td><td>150.0%</td></tr>
+              <tr><td>RB</td><td>1.310</td><td>-8.5%</td><td>1.860</td><td>29</td><td>0.0%</td><td>180.0%</td></tr>
+              <tr><td>CS</td><td>1.338</td><td>-8.6%</td><td>1.846</td><td>96</td><td>0.0%</td><td>120.0%</td></tr>
+              <tr><td>SS</td><td>1.502</td><td>-18.2%</td><td>1.751</td><td>6</td><td>2.0%</td><td>180.0%</td></tr>
+              <tr><td>RU</td><td>1.334</td><td>-9.9%</td><td>1.454</td><td>9</td><td>1.0%</td><td>180.0%</td></tr>
+              <tr><td>V</td><td>1.420</td><td>-15.3%</td><td>1.385</td><td>11</td><td>2.0%</td><td>150.0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-strip">
+      <div>
+        <p class="eyebrow">Official Contact</p>
+        <h2>先看策略，再回到花蕾整体官网。</h2>
+        <p class="hero-text">CTA 页面适合展示策略研究结果，首页则负责承接公司整体业务介绍与对外沟通。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="./index.html">返回官网首页</a>
+        <a class="secondary-link" href="mailto:bd@hualei.app">交流合作</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>花蕾 Hualei</strong>
+      <p>CTA 策略研究页面</p>
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">LOF 数据</a>
+      <a href="./cta.html">CTA 策略</a>
+      <a href="#results">结果</a>
+      <a href="#method">方法</a>
+    </div>
+  </footer>
+</body>
+</html>
