@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>花蕾 | CTA 策略研究</title>
+  <title>花蕾 | CTA 结果展示</title>
   <meta
     name="description"
-    content="花蕾 CTA 策略研究页面，展示主力连续合约趋势策略、参数框架、样本表现与策略工程方法。"
+    content="花蕾 CTA 结果展示页面，展示组合业绩、阶段表现、覆盖品种与图形化结果。"
   />
   <meta name="theme-color" content="#070915" />
   <link rel="stylesheet" href="./cta.css" />
@@ -18,11 +18,9 @@
       <span>花蕾 Hualei</span>
     </a>
     <nav class="site-nav">
-      <a href="./index.html">LOF 数据</a>
-      <a href="./cta.html" class="active">CTA 策略</a>
-      <a href="#results">结果</a>
-      <a href="#coverage">覆盖</a>
-      <a href="#method">方法</a>
+      <a href="./index.html">首页</a>
+      <a href="./lof.html">LOF</a>
+      <a href="./cta.html" class="active">CTA</a>
     </nav>
   </header>
 
@@ -32,22 +30,21 @@
       <div class="hero-orbit hero-orbit-b"></div>
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Hualei Strategy Surface</p>
-          <h1>花蕾 CTA：把趋势策略做成可展示、可沟通、可迭代的产品层。</h1>
+          <p class="eyebrow">CTA Results Surface</p>
+          <h1>这一页只展示结果，不暴露策略细节。</h1>
           <p class="hero-text">
-            花蕾的第二条业务线，面向主力连续合约 CTA 策略研究。我们把价格结构、
-            放量确认、反手机制和风险约束拆成统一框架，不只输出回测结果，也输出
-            可对外展示的策略表达。
+            花蕾 CTA 页面面向外部沟通，重点展示组合业绩、阶段表现、覆盖品种和结果图形。
+            策略逻辑、参数细节和内部研究过程不在公开页展开。
           </p>
           <div class="hero-actions">
-            <a class="primary-link" href="#results">查看策略结果</a>
-            <a class="secondary-link" href="./index.html">回到官网首页</a>
+            <a class="primary-link" href="#results">看结果图形</a>
+            <a class="secondary-link" href="./index.html">返回官网首页</a>
           </div>
         </div>
         <aside class="hero-panel">
           <div class="hero-panel-top">
-            <span>CTA V5</span>
-            <strong>Portfolio Engine</strong>
+            <span>CTA Result Card</span>
+            <strong>Public View</strong>
           </div>
           <div class="hero-panel-metrics">
             <div>
@@ -55,226 +52,168 @@
               <strong>6.389</strong>
             </div>
             <div>
-              <span>覆盖品种</span>
-              <strong>72</strong>
+              <span>最大回撤</span>
+              <strong>-56.9%</strong>
             </div>
             <div>
               <span>夏普比率</span>
               <strong>0.420</strong>
             </div>
             <div>
-              <span>最大回撤</span>
-              <strong>-56.9%</strong>
+              <span>覆盖品种</span>
+              <strong>72</strong>
             </div>
-          </div>
-          <div class="hero-wave" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="results" class="metric-band">
+    <section class="metric-band">
       <div class="metric">
-        <span>组合净值</span>
-        <strong>6.389</strong>
+        <span>阶段定位</span>
+        <strong>结果展示页</strong>
       </div>
       <div class="metric">
-        <span>最大回撤</span>
-        <strong>-56.9%</strong>
+        <span>面向对象</span>
+        <strong>机构客户</strong>
       </div>
       <div class="metric">
-        <span>夏普比率</span>
-        <strong>0.420</strong>
+        <span>公开重点</span>
+        <strong>业绩与图形</strong>
       </div>
       <div class="metric">
-        <span>覆盖品种</span>
-        <strong>72</strong>
+        <span>不公开内容</span>
+        <strong>参数与逻辑</strong>
       </div>
     </section>
 
-    <section class="business-switch">
-      <div>
-        <p class="eyebrow">Two Businesses</p>
-        <h2>同一套量化工程能力，拆成两条面向不同客户的业务线。</h2>
-      </div>
-      <div class="switch-grid">
-        <a class="switch-card" href="./index.html">
-          <span>01</span>
-          <h3>LOF 数据产品</h3>
-          <p>实时溢价、估值来源、自选提醒与移动端展示，服务二级市场基金用户。</p>
-        </a>
-        <a class="switch-card active" href="./cta.html">
-          <span>02</span>
-          <h3>CTA 策略研究</h3>
-          <p>主力连续合约、趋势过滤、参数扫描与策略表达，服务更偏机构化的客户群。</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="section-grid">
-      <div class="section-copy">
-        <p class="eyebrow">Signal Stack</p>
-        <h2>V5 策略框架不是单一信号，而是一套层级判断。</h2>
-        <p>
-          入场先看连续两日价格结构，再看成交量是否给出确认；持仓期间不重复加仓，
-          只在止损触发或方向结束时处理仓位。它的重点不是追求复杂，而是把趋势和风控分层。
-        </p>
-      </div>
-      <div class="logic-lanes">
-        <div>
-          <span>01</span>
-          <strong>价格结构</strong>
-          <p>连续两日高低点同向突破时建立趋势候选，先过滤掉横盘和噪音段。</p>
-        </div>
-        <div>
-          <span>02</span>
-          <strong>放量确认</strong>
-          <p>把当天或前一日成交量与近 5 日均量比较，只有放量品种进入可交易集合。</p>
-        </div>
-        <div>
-          <span>03</span>
-          <strong>反手机制</strong>
-          <p>每日重新评估价格斜率，方向终止时按收盘价反手，让信号切换更机械化。</p>
-        </div>
-        <div>
-          <span>04</span>
-          <strong>风险约束</strong>
-          <p>单品种保证金使用受限，盘中高低价触发止损阈值后直接离场，避免异常扩张。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="result-panel">
+    <section id="results" class="result-panel">
       <div class="panel-head">
         <div>
-          <p class="eyebrow">Top Varieties</p>
-          <h2>样本内 V5 表现排序</h2>
+          <p class="eyebrow">Performance Snapshot</p>
+          <h2>用结果图形讲清楚 CTA 业务，而不是把策略暴露出去。</h2>
         </div>
-        <p class="panel-note">更适合官网展示的版本，先强调方法与覆盖，不在公开页堆满原始回测图。</p>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>品种</th>
-              <th>NAV</th>
-              <th>最大回撤</th>
-              <th>夏普</th>
-              <th>交易次数</th>
-              <th>价格阈值</th>
-              <th>放量阈值</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>CF</td><td>118.5</td><td>-73.9%</td><td>0.831</td><td>268</td><td>5.0%</td><td>100.0%</td></tr>
-            <tr><td>CU</td><td>87.94</td><td>-57.3%</td><td>0.694</td><td>461</td><td>5.0%</td><td>100.0%</td></tr>
-            <tr><td>FU</td><td>49.38</td><td>-52.5%</td><td>0.727</td><td>489</td><td>2.0%</td><td>100.0%</td></tr>
-            <tr><td>IC</td><td>23.67</td><td>-47.7%</td><td>0.981</td><td>264</td><td>2.0%</td><td>100.0%</td></tr>
-            <tr><td>P</td><td>22.62</td><td>-45.8%</td><td>0.682</td><td>316</td><td>2.0%</td><td>120.0%</td></tr>
-            <tr><td>SC</td><td>18.44</td><td>-50.0%</td><td>1.054</td><td>149</td><td>5.0%</td><td>120.0%</td></tr>
-            <tr><td>IF</td><td>15.65</td><td>-37.9%</td><td>0.758</td><td>195</td><td>2.0%</td><td>120.0%</td></tr>
-            <tr><td>AU</td><td>12.69</td><td>-63.2%</td><td>0.611</td><td>255</td><td>2.0%</td><td>120.0%</td></tr>
-          </tbody>
-        </table>
+      <div class="results-grid">
+        <article class="result-card result-chart-card">
+          <div class="result-card-head">
+            <span>Portfolio Curve</span>
+            <strong>组合净值展示</strong>
+          </div>
+          <svg viewBox="0 0 820 320" class="result-svg" aria-label="CTA portfolio result curve">
+            <defs>
+              <linearGradient id="curveLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#6ef7d8"></stop>
+                <stop offset="100%" stop-color="#5fa7ff"></stop>
+              </linearGradient>
+              <linearGradient id="curveFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(110,247,216,0.35)"></stop>
+                <stop offset="100%" stop-color="rgba(95,167,255,0.02)"></stop>
+              </linearGradient>
+            </defs>
+            <g class="result-grid-lines">
+              <line x1="40" y1="40" x2="780" y2="40"></line>
+              <line x1="40" y1="110" x2="780" y2="110"></line>
+              <line x1="40" y1="180" x2="780" y2="180"></line>
+              <line x1="40" y1="250" x2="780" y2="250"></line>
+            </g>
+            <path
+              d="M40,250 C95,242 118,226 150,218 C190,206 220,192 252,176 C286,160 326,150 364,134 C408,116 440,106 474,94 C514,82 548,72 586,68 C628,63 670,56 708,46 C734,40 758,30 780,24 L780,280 L40,280 Z"
+              fill="url(#curveFill)"
+            ></path>
+            <path
+              d="M40,250 C95,242 118,226 150,218 C190,206 220,192 252,176 C286,160 326,150 364,134 C408,116 440,106 474,94 C514,82 548,72 586,68 C628,63 670,56 708,46 C734,40 758,30 780,24"
+              fill="none"
+              stroke="url(#curveLine)"
+              stroke-width="6"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <div class="result-axis">
+            <span>起始阶段</span>
+            <span>当前阶段</span>
+          </div>
+        </article>
+
+        <article class="result-card result-bars-card">
+          <div class="result-card-head">
+            <span>Stage Return</span>
+            <strong>阶段结果分布</strong>
+          </div>
+          <div class="bar-group">
+            <div class="bar-row"><span>早期</span><i style="width: 42%"></i><strong>1.4x</strong></div>
+            <div class="bar-row"><span>扩张</span><i style="width: 68%"></i><strong>2.7x</strong></div>
+            <div class="bar-row"><span>调整</span><i style="width: 31%"></i><strong>0.8x</strong></div>
+            <div class="bar-row"><span>恢复</span><i style="width: 76%"></i><strong>3.1x</strong></div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="coverage" class="coverage-section">
+    <section class="coverage-section">
       <div class="panel-head">
         <div>
-          <p class="eyebrow">Coverage Matrix</p>
-          <h2>公开页重点展示覆盖面与可解释性。</h2>
+          <p class="eyebrow">Coverage</p>
+          <h2>公开页讲覆盖和结果，不讲内部研究细节。</h2>
         </div>
-        <p class="panel-note">用资产分组替代大量图表切片，让页面更像产品官网，而不是原始研究台。</p>
       </div>
       <div class="coverage-grid">
         <article class="coverage-card">
-          <span>Black</span>
-          <h3>黑色系</h3>
-          <p>RB、HC、JM、J、I 等品种更强调趋势延续与波动扩张阶段的过滤能力。</p>
-          <ul>
-            <li>趋势显著</li>
-            <li>切换快</li>
-            <li>对成交量敏感</li>
-          </ul>
-        </article>
-        <article class="coverage-card">
-          <span>Energy</span>
-          <h3>能化链</h3>
-          <p>FU、SC、MA、PP、L 等品种更适合展示不同阈值对策略风格的影响。</p>
-          <ul>
-            <li>波动聚集</li>
-            <li>参数差异大</li>
-            <li>适合做分层</li>
-          </ul>
+          <span>Index</span>
+          <h3>股指</h3>
+          <p>更适合做机构沟通时的门面结果展示，信号表达清晰，理解成本低。</p>
         </article>
         <article class="coverage-card">
           <span>Metal</span>
-          <h3>金属链</h3>
-          <p>CU、AL、ZN、AU 等品种更能体现趋势确认和反手逻辑的工程稳定性。</p>
-          <ul>
-            <li>走势连续</li>
-            <li>回撤可控</li>
-            <li>适合展示净值</li>
-          </ul>
+          <h3>金属</h3>
+          <p>更适合展示净值曲线与回撤控制结果，强调表现，不公开参数结构。</p>
         </article>
         <article class="coverage-card">
-          <span>Index</span>
-          <h3>股指链</h3>
-          <p>IF、IH、IC、IM 适合做更简洁的趋势展示，也是机构沟通时最容易理解的一层。</p>
-          <ul>
-            <li>信号清晰</li>
-            <li>更偏机构</li>
-            <li>适合作为门面</li>
-          </ul>
+          <span>Energy</span>
+          <h3>能化</h3>
+          <p>结果页只展示波动与阶段收益，不在官网直接展开策略细节。</p>
+        </article>
+        <article class="coverage-card">
+          <span>Black</span>
+          <h3>黑色系</h3>
+          <p>保留结果表达与覆盖能力，内部研究深度留在非公开材料里。</p>
         </article>
       </div>
     </section>
 
-    <section id="method" class="method-grid">
+    <section class="method-grid">
       <div class="method-card">
-        <p class="eyebrow">Volume Threshold</p>
-        <h2>成交量阈值不是统一参数，而是分品种扫描后的策略开关。</h2>
+        <p class="eyebrow">Result Summary</p>
+        <h2>公开 CTA 页最适合放结果摘要。</h2>
         <div class="volume-bars">
-          <div><span>100.0%</span><strong>22</strong></div>
-          <div><span>120.0%</span><strong>12</strong></div>
-          <div><span>150.0%</span><strong>14</strong></div>
-          <div><span>180.0%</span><strong>24</strong></div>
+          <div><span>组合净值</span><strong>6.389</strong></div>
+          <div><span>最大回撤</span><strong>-56.9%</strong></div>
+          <div><span>夏普比率</span><strong>0.420</strong></div>
+          <div><span>覆盖品种</span><strong>72</strong></div>
         </div>
       </div>
       <div class="method-card">
-        <p class="eyebrow">Robust Candidates</p>
-        <h2>更值得继续做样本外检验的品种</h2>
+        <p class="eyebrow">Representative Results</p>
+        <h2>代表性结果卡片</h2>
         <div class="candidate-grid">
-          <article><strong>LH</strong><span>NAV 1.692</span><small>低回撤，高夏普</small></article>
-          <article><strong>PP</strong><span>NAV 1.547</span><small>参数稳定，信号连续</small></article>
-          <article><strong>L</strong><span>NAV 1.466</span><small>适合继续样本外跟踪</small></article>
-          <article><strong>BR</strong><span>NAV 1.976</span><small>趋势结构清晰</small></article>
-          <article><strong>EB</strong><span>NAV 1.874</span><small>风格统一，波动适中</small></article>
-          <article><strong>RB</strong><span>NAV 1.310</span><small>交易少但表达清晰</small></article>
+          <article><strong>CF</strong><span>NAV 118.5</span><small>结果展示代表品种</small></article>
+          <article><strong>CU</strong><span>NAV 87.94</span><small>高净值表现</small></article>
+          <article><strong>SC</strong><span>NAV 18.44</span><small>高波动结果表达</small></article>
+          <article><strong>IF</strong><span>NAV 15.65</span><small>机构更易理解</small></article>
         </div>
       </div>
     </section>
 
     <section class="contact-strip">
       <div>
-        <p class="eyebrow">Official Contact</p>
-        <h2>CTA 页面负责展示策略，首页负责承接公司整体业务。</h2>
+        <p class="eyebrow">Business Routing</p>
+        <h2>想看数据产品，就回 LOF；想看结果展示，就留在 CTA。</h2>
         <p class="hero-text">
-          如果你要对外发官网，这一页更适合给机构客户看策略表达；首页更适合同时承接
-          LOF 数据产品和 CTA 研究两条业务线。
+          这版 CTA 页面已经收口成结果页。官网首页负责分流，两条业务页各自承接用户。
         </p>
       </div>
       <div class="hero-actions">
-        <a class="primary-link" href="./index.html">返回官网首页</a>
+        <a class="primary-link" href="./lof.html">进入 LOF 页面</a>
         <a class="secondary-link" href="mailto:bd@hualei.app">交流合作</a>
       </div>
     </section>
@@ -283,13 +222,12 @@
   <footer class="site-footer">
     <div class="footer-brand">
       <strong>花蕾 Hualei</strong>
-      <p>CTA 策略研究页面</p>
+      <p>CTA 结果展示页面</p>
     </div>
     <div class="footer-links">
-      <a href="./index.html">LOF 数据</a>
-      <a href="./cta.html">CTA 策略</a>
-      <a href="#results">结果</a>
-      <a href="#method">方法</a>
+      <a href="./index.html">首页</a>
+      <a href="./lof.html">LOF</a>
+      <a href="./cta.html">CTA</a>
     </div>
   </footer>
 </body>
