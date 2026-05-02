@@ -1,7 +1,6 @@
 :root {
   color-scheme: dark;
   --bg: #050712;
-  --bg-soft: rgba(10, 16, 32, 0.82);
   --panel: rgba(12, 19, 39, 0.76);
   --panel-strong: rgba(18, 26, 52, 0.95);
   --line: rgba(131, 159, 255, 0.18);
@@ -9,11 +8,8 @@
   --muted: rgba(222, 230, 255, 0.72);
   --accent: #6ef7d8;
   --accent-2: #5fa7ff;
-  --accent-3: #ff7ad9;
+  --accent-3: #ff9f7f;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
-  --radius-xl: 32px;
-  --radius-lg: 24px;
-  --radius-md: 18px;
 }
 
 * {
@@ -30,7 +26,7 @@ body {
   font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   background:
     radial-gradient(circle at top, rgba(95, 167, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 80% 20%, rgba(255, 122, 217, 0.16), transparent 24%),
+    radial-gradient(circle at 80% 20%, rgba(255, 159, 127, 0.16), transparent 24%),
     linear-gradient(180deg, #060816 0%, #050712 100%);
   color: var(--text);
 }
@@ -73,7 +69,7 @@ main {
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-3) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   box-shadow: 0 0 18px rgba(110, 247, 216, 0.55);
 }
 
@@ -132,13 +128,13 @@ main {
   bottom: -120px;
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, rgba(255, 122, 217, 0.28), transparent 62%);
+  background: radial-gradient(circle, rgba(255, 159, 127, 0.22), transparent 62%);
 }
 
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
   gap: 28px;
 }
 
@@ -152,27 +148,23 @@ main {
 }
 
 .hero h1,
-.section-copy h2,
 .panel-head h2,
+.coverage-section h2,
 .method-card h2,
-.contact-strip h2,
-.business-switch h2 {
+.contact-strip h2 {
   margin: 0;
   line-height: 1.06;
   letter-spacing: -0.04em;
 }
 
 .hero h1 {
-  max-width: 12ch;
+  max-width: 11ch;
   font-size: clamp(40px, 7vw, 68px);
 }
 
 .hero-text,
-.section-copy p,
-.logic-lanes p,
-.switch-card p,
-.coverage-card p,
-.panel-note {
+.panel-note,
+.coverage-card p {
   color: var(--muted);
 }
 
@@ -214,8 +206,6 @@ main {
 
 .hero-panel,
 .metric-band,
-.business-switch,
-.section-grid,
 .result-panel,
 .coverage-section,
 .method-grid,
@@ -255,9 +245,9 @@ main {
 
 .hero-panel-metrics div,
 .metric,
-.switch-card,
 .coverage-card,
 .method-card,
+.result-card,
 .candidate-grid article {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
@@ -280,8 +270,6 @@ main {
 .hero-panel-metrics strong,
 .metric strong,
 .coverage-card h3,
-.switch-card h3,
-.logic-lanes strong,
 .candidate-grid strong {
   display: block;
   margin-top: 8px;
@@ -292,32 +280,7 @@ main {
   letter-spacing: -0.03em;
 }
 
-.hero-wave {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
-  align-items: end;
-  height: 160px;
-  margin-top: 26px;
-}
-
-.hero-wave span {
-  display: block;
-  border-radius: 999px 999px 12px 12px;
-  background: linear-gradient(180deg, rgba(110, 247, 216, 0.18), rgba(95, 167, 255, 0.88));
-}
-
-.hero-wave span:nth-child(1) { height: 34%; }
-.hero-wave span:nth-child(2) { height: 48%; }
-.hero-wave span:nth-child(3) { height: 42%; }
-.hero-wave span:nth-child(4) { height: 74%; }
-.hero-wave span:nth-child(5) { height: 56%; }
-.hero-wave span:nth-child(6) { height: 88%; }
-.hero-wave span:nth-child(7) { height: 68%; }
-.hero-wave span:nth-child(8) { height: 92%; }
-
 .metric-band,
-.business-switch,
 .result-panel,
 .coverage-section,
 .contact-strip {
@@ -343,103 +306,6 @@ main {
   letter-spacing: -0.03em;
 }
 
-.business-switch,
-.section-grid,
-.method-grid,
-.contact-strip {
-  display: grid;
-  gap: 24px;
-}
-
-.switch-grid,
-.coverage-grid,
-.candidate-grid {
-  display: grid;
-  gap: 18px;
-}
-
-.switch-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.switch-card {
-  padding: 22px;
-  border-radius: 22px;
-}
-
-.switch-card.active {
-  background: linear-gradient(180deg, rgba(95, 167, 255, 0.18), rgba(255, 122, 217, 0.1));
-  border-color: rgba(110, 247, 216, 0.28);
-}
-
-.switch-card span {
-  color: rgba(110, 247, 216, 0.92);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-}
-
-.switch-card h3 {
-  margin: 12px 0 10px;
-  font-size: 24px;
-}
-
-.section-grid {
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  margin-top: 28px;
-  padding: 30px;
-  border-radius: 28px;
-  background: var(--panel);
-}
-
-.section-copy h2,
-.business-switch h2,
-.panel-head h2,
-.method-card h2,
-.contact-strip h2 {
-  font-size: clamp(30px, 4vw, 46px);
-}
-
-.section-copy p {
-  margin-top: 18px;
-  line-height: 1.8;
-}
-
-.logic-lanes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.logic-lanes div {
-  padding: 20px;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.logic-lanes span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: rgba(110, 247, 216, 0.12);
-  color: rgba(110, 247, 216, 0.94);
-  font-weight: 700;
-}
-
-.logic-lanes strong {
-  margin-top: 14px;
-  font-size: 20px;
-}
-
-.logic-lanes p {
-  margin: 12px 0 0;
-  line-height: 1.7;
-}
-
 .panel-head {
   display: flex;
   align-items: end;
@@ -454,32 +320,86 @@ main {
   text-align: right;
 }
 
-.table-wrap {
-  overflow-x: auto;
+.results-grid,
+.coverage-grid,
+.candidate-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.results-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.result-card {
+  padding: 22px;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-table {
+.result-card-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.result-card-head span {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.result-card-head strong {
+  font-size: 20px;
+}
+
+.result-svg {
   width: 100%;
-  border-collapse: collapse;
-  min-width: 760px;
+  height: auto;
 }
 
-thead {
-  background: rgba(255, 255, 255, 0.03);
+.result-grid-lines line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
 }
 
-th,
-td {
-  padding: 16px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: left;
+.result-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.bar-group {
+  display: grid;
+  gap: 14px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 72px 1fr 60px;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar-row span,
+.bar-row strong {
   font-size: 14px;
 }
 
-tbody tr:hover {
-  background: rgba(110, 247, 216, 0.04);
+.bar-row span,
+.bar-row strong {
+  color: var(--text);
+}
+
+.bar-row i {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
 }
 
 .coverage-grid {
@@ -507,15 +427,10 @@ tbody tr:hover {
   line-height: 1.7;
 }
 
-.coverage-card ul {
-  margin: 18px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
 .method-grid {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-top: 28px;
 }
 
@@ -543,7 +458,7 @@ tbody tr:hover {
   justify-content: space-between;
   gap: 16px;
   background:
-    linear-gradient(90deg, rgba(95, 167, 255, 0.16), rgba(255, 122, 217, 0.08)),
+    linear-gradient(90deg, rgba(95, 167, 255, 0.16), rgba(255, 159, 127, 0.08)),
     rgba(255, 255, 255, 0.03);
 }
 
@@ -578,7 +493,9 @@ tbody tr:hover {
 }
 
 .contact-strip {
+  display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
   align-items: center;
 }
 
@@ -608,16 +525,14 @@ tbody tr:hover {
 
 @media (max-width: 1024px) {
   .hero-grid,
-  .section-grid,
+  .results-grid,
+  .coverage-grid,
   .method-grid,
-  .contact-strip,
-  .coverage-grid {
+  .contact-strip {
     grid-template-columns: 1fr;
   }
 
   .metric-band,
-  .switch-grid,
-  .logic-lanes,
   .candidate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -648,8 +563,6 @@ tbody tr:hover {
 
   .hero,
   .metric-band,
-  .business-switch,
-  .section-grid,
   .result-panel,
   .coverage-section,
   .method-card,
@@ -664,8 +577,6 @@ tbody tr:hover {
   }
 
   .metric-band,
-  .switch-grid,
-  .logic-lanes,
   .candidate-grid {
     grid-template-columns: 1fr;
   }
