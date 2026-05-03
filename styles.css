@@ -213,6 +213,34 @@ a {
   margin-top: 22px;
 }
 
+.portal-feature-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.portal-feature-list span {
+  color: var(--text);
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+.portal-hero-strong {
+  align-items: end;
+}
+
+.portal-metrics-hero {
+  align-self: stretch;
+}
+
+.portal-grid-strong .portal-card h2 {
+  max-width: 10ch;
+}
+
+.portal-overview {
+  margin-top: 22px;
+}
+
 .portal-card {
   position: relative;
   overflow: hidden;
